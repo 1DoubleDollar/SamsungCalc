@@ -1,0 +1,119 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+:root{
+    --primary-dark : #000000;
+    --primary-light : #ffffff;
+    --primary-dark-light : #212121;
+    --primary-light-dark : #dedede;
+}
+#screen{
+    text-align: end;
+    margin-top:5px;
+    padding-right: 10px;
+    font-size: 22px;
+    width: 250px;
+    height:90px;
+    overflow: auto;
+    overflow-x : visible;   
+}
+#screen::-webkit-scrollbar{
+    width:0px;
+}
+#evalution{
+    min-width: 250px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow : auto;
+}
+.current-answer{
+    opacity: 0.6;
+    align-self: flex-end;
+    position: relative;
+    /* top:-4px; */
+}
+.calc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap:55px; */
+    min-height: 450px;
+    border:1px solid var(--primary-light);
+    padding : 5px;
+    border-radius: 10px;
+}
+#buttons{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+hr{
+    color : white;
+    width : 250px;
+}
+input{
+    border : none;
+    border-radius: 500px;
+    height: 55px;
+    width : 55px; 
+    margin : 2px;
+    color : var(--primary-light);
+    background-color: var(--primary-dark-light);
+}
+
+#bracket,#mod,#divide,#multiply,#subtract,#sum{
+    color : rgb(0, 202, 0)
+}
+#equalTo{
+    background-color:rgb(0, 202, 0)
+}
+#clear{
+    color :rgb(255, 37, 37)
+}
+#plusminus{
+    position: relative;
+    top:-1px;
+    font-size: 14px;
+}
+/* #screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+} */
+
+#back-container{
+    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+#backspace{
+    position:relative;
+    width:30px;
+    height: 30px;
+    right: -25px;
+    background-color: #000000;
+    background: transparent;
+}
+svg{
+    position:relative;
+    top:-10px;
+    color:rgb(0, 202, 0);
+    z-index:-1;
+}
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}

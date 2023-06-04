@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisaab Lga Le</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="calc">
+        <div class="screen" id="screen">
+            <div id="evalution" class="evalution"></div>
+        </div>
+        <div class="buttons" id="buttons">
+            <div class = "current-answer">Current answer</div>
+            <div id="back-container">
+                <input type="button" class="backspace" id="backspace" value="" data-operator>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                </svg>
+            </div>
+            <hr>
+            <div class="row-first" id="row-first">
+                <input type="button" id="clear" value="C">
+                <input type="button" id="bracket" value="()">
+                <input type="button" id="mod" value="%">
+                <input type="button" id="divide" value="/">
+            </div>
+            <div class="row-second" id="row-second">
+                <input type="button" id="seven" value="7">
+                <input type="button" id="eight" value="8">
+                <input type="button" id="nine" value="9">
+                <input type="button" id="multiply" value="*">
+            </div>
+            <div class="row-third" id="row-third">
+                <input type="button" id ="four" value="4">
+                <input type="button" id="five" value="5">
+                <input type="button" id = "six" value="6">
+                <input type="button" id="subtract" value="-">
+            </div>
+            <div class="row-fourth" id="row-fourth">
+                <input type="button" id ="one" value="1">
+                <input type="button" id="two" value="2">
+                <input type="button" id = "three" value="3">
+                <input type="button" id="sum" value="+">
+            </div>
+            <div class="row-fifth" id="row-fifth">
+                <input type="button" id ="plusminus" value="+/-">
+                <input type="button" id="zero" value="0">
+                <input type="button" id = "decimal" value=".">
+                <input type="button" id="equalTo" value="=">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
