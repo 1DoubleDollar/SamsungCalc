@@ -41,7 +41,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     /* gap:55px; */
-    min-height: 450px;
+    height: 450px;
     border:1px solid var(--primary-light);
     padding : 5px;
     border-radius: 10px;
@@ -82,13 +82,8 @@ input{
     position: relative;
     top:-1px;
     font-size: 14px;
+    opacity: 0.5;
 }
-/* #screen{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-} */
 
 #back-container{
     align-self: flex-end;
@@ -111,9 +106,33 @@ svg{
     color:rgb(0, 202, 0);
     z-index:-1;
 }
+.animate{
+    animation : mymove 0.1s ease-out
+}
+@keyframes mymove {
+    0% { opacity : 1;
+        top : -4px;
+        font-size:18px;
+        }
+    25%{ opacity : 0.75;
+        top:-24.5px;
+        font-size: 19px;}
+    50%{ opacity :0.5;
+        top : -45px;
+        font-size:20px;}
+    75%{ opacity :0.25;
+        top:-65.5px;
+        font-size:21px;}
+    100%{ opacity : 0;
+        top : -86px;
+        font-size:22px;}
+}
 @media screen and (prefers-color-scheme: dark) {
     body {
         background-color: black;
         color: white;
     }
+}
+#bracket{
+    opacity: 0.5;
 }
