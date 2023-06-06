@@ -56,7 +56,7 @@ window.addEventListener("keydown",handleKey)
 equalButton.addEventListener("click",show)
 deleteButton.addEventListener("click",backspace)
 clearButton.addEventListener("click",clear)
-// pointButton.addEventListener("click",appendPoint)
+pointButton.addEventListener("click",appendPoint)
 numberButtons.forEach((button)=>{
     button.addEventListener("click",(button)=>{
         appendNumber(button.target.value)
