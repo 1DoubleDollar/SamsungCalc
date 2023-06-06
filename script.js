@@ -132,7 +132,7 @@ function appendPoint(){
     }
 }
 function show(){
-    if(!stop || currentOperation != null){
+    if(!stop && currentOperation != null){
         setTimeout(()=>{
             evaluationScreen.textContent=currentAnswerScreen.textContent
             currentAnswerScreen.textContent=''
@@ -144,6 +144,7 @@ function show(){
         },100)
         currentAnswerScreen.classList.add('animate')
     }
+    else
     stop =false;
 }
 
