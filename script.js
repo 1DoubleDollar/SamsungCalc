@@ -40,6 +40,8 @@ let firstOperand = ''
 let secondOperand = ''
 let currentOperation =null
 let resetScreens = false
+let lastOperation = true;
+let stop = false
 
 const numberButtons = document.querySelectorAll("[data-number]")
 const operatorButtons = document.querySelectorAll("[data-operator]")
@@ -54,8 +56,7 @@ window.addEventListener("keydown",handleKey)
 equalButton.addEventListener("click",show)
 deleteButton.addEventListener("click",backspace)
 clearButton.addEventListener("click",clear)
-let lastOperation = true;
-
+// pointButton.addEventListener("click",appendPoint)
 numberButtons.forEach((button)=>{
     button.addEventListener("click",(button)=>{
         appendNumber(button.target.value)
@@ -109,9 +110,27 @@ function setOperation(value){
         evaluationScreen.textContent+=value
         lastOperation = true;
     }   
-
 }
-let stop = false
+function appendPoint(){
+    if(evaluationScreen.textContent==''){
+        evaluationScreen.textContent+='0.'}
+    else{
+        let i = -1;
+        let check = false;
+        while(evaluationScreen.textContent.at(i) != currentOperation )
+        {
+            if(evaluationScreen.textContent.at(i)=='.'){
+                console.log("Invalid point")
+                check=true;
+                break;
+            }
+            i--;
+        }
+        if(!check){
+            evaluationScreen.textContent+='.'
+        }
+    }
+}
 function show(){
     if(!stop || currentOperation != null){
         setTimeout(()=>{
@@ -124,7 +143,6 @@ function show(){
             currentAnswerScreen.classList.remove('animate')
         },100)
         currentAnswerScreen.classList.add('animate')
-
     }
     stop =false;
 }
@@ -152,4 +170,6 @@ function handleKey(e){
         show()
     if(e.key== 'Escape')
         clear()
+    if(e.key== '.')
+        appendPoint()
 }
