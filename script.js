@@ -112,7 +112,7 @@ function setOperation(value){
     }   
 }
 function appendPoint(){
-    if(evaluationScreen.textContent==''){
+    if(evaluationScreen.textContent=='' || evaluationScreen.textContent.at(-1) == currentOperation){
         evaluationScreen.textContent+='0.'}
     else{
         let i = -1;
